@@ -6,11 +6,13 @@ You would use either plugin / gem if you wished that when you called `destroy` o
 
 If you wish to actually destroy an object you may call `really_destroy!`. **WARNING**: This will also *really destroy* all `dependent: destroy` records, so please aim this method away from face when using.**
 
-If a record has `has_many` associations defined AND those associations have `dependent: :destroy` set on them, then they will also be soft-deleted if ``acts_as_paranoid`` is set,  otherwise the normal destroy will be called. 
+If a record has `has_many` associations defined AND those associations have `dependent: :destroy` set on them, then they will also be soft-deleted if ``acts_as_paranoid`` is set,  otherwise the normal destroy will be called.
 
 ## Installation & Usage
 
 For Rails 3, please use version 1 of Paranoia:
+
+NOTE: This is a forked repository to fix the #123 issue for rails 3. This forked gem works for our project, first test in your project to integrate this gem in your production environment. 
 
 ```ruby
 gem 'paranoia', '~> 1.0'
